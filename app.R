@@ -1,5 +1,10 @@
-#' TODO:
-#' [ ] Agregar el resto de curvas del modelo SEIR (modificar funciones) en escenarios
+###########################################################################
+## Autores: Angélica Moreno, Lina Buitrago y Carlos Avellaneda
+## Descripción: Implementación del modelo SIR en R y Shiny
+###########################################################################
+# TODO:
+# - Agregar el resto de curvas del modelo SIR en escenarios
+###########################################################################
 
 rm(list=ls())
 library(shiny)
@@ -10,8 +15,9 @@ library(dplyr)
 library(matrixStats)
 library(reshape2)
 
+###########################################################################
 # Global ------------------------------------------------------------------
-
+###########################################################################
 ## Parametros: ####
 
 # Numero reproductivo basico (Zhang S, Estimation of the reproductive number of Novel Coronavirus (COVID-19) and the probable outbreak size on the Diamond Princess cruise ship: A data-driven analysis. Int J Infect Dis. 2020;1–9.)
@@ -245,8 +251,9 @@ Covid19ModelAccIntermitente <- function(name = "Colombia", pob = 38837139, nInit
 }
 
 
-
+###########################################################################
 # UI ----------------------------------------------------------------------
+###########################################################################
 ui <- dashboardPage(
   dashboardHeader(title = "Modelo SIR"),
   dashboardSidebar(
@@ -357,9 +364,9 @@ ui <- dashboardPage(
   )
 )
 
-
+###########################################################################
 # Server ------------------------------------------------------------------
-
+###########################################################################
 server <- function(input, output){
 
 # Modelo base -------------------------------------------------------------
