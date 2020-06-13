@@ -1,5 +1,5 @@
 #' TODO:
-#' [ ] Agregar el resto de curvas del modelo SEIR (modificar funciones) en escenarios :'(
+#' [ ] Agregar el resto de curvas del modelo SEIR (modificar funciones) en escenarios
 
 rm(list=ls())
 library(shiny)
